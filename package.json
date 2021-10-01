@@ -11,7 +11,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2",
     "web3": "^1.6.0",
-    "contracts": "file:../../quadratic-funding/build/contracts"
+    "contracts": "file:./truffle"
   },
   "scripts": {
     "start": "react-scripts start",

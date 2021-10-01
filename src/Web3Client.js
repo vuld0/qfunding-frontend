@@ -1,4 +1,5 @@
-import QFundingBuild from 'contracts/QFunding.json'
+import Web3 from 'web3';
+import QFundingBuild from 'contracts/qfunding.json'
 let selectedAccount;
 
 
@@ -21,8 +22,9 @@ export const init = async () => {
       console.log(`Selected account changed to ${selectedAccount}`);
     });
     }
-    const web3 = new Web3(providerUrl);
+    const web3 = new Web3(provider);
 
     const networkId = await web3.eth.net.getId();
-    const qFundingContract = new web3.eth.Contract(QFundingBuild.abi, nftContract.networks[networkId].address)
+    const qFundingContract = new web3.eth.Contract(QFundingBuild.abi);
+    console.log(qFundingContract)
 }
